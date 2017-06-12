@@ -1,15 +1,28 @@
 import React from "react";
+import Request from "superagent";
 
 export class Home extends React.Component {
 
+		constructor(){
+			super();
+			this.state = {user:[]};
+		}
 		ifExpert(props) {
 		var expert = props;
 
 		if (expert) {
-			return(<i className="fa fa-check"></i>);
+			return(<i className="fa fa-check fa-2x fa-fw"></i>);
 		} 
 	}
 
+	componentWillMount() {
+	var url = "http://laravel.dev/v1/programmers";
+	Request.get(url).then((response) => {
+		this.setState({
+			user:response.body
+		})
+	})
+	}
 	render() {
 		return(
 			<ul className="list-group">
@@ -36,7 +49,7 @@ export class Home extends React.Component {
 			</div>
 			</li>
 
-			{this.props.user.map((user, i) =><li className="list-group-item" key={i}>
+			{this.state.user.map((user, i) =><li className="list-group-item" key={i}>
 			<div className="row">
 				<div className="col-sm-2">
 					<a>{user.name}</a>
@@ -54,7 +67,7 @@ export class Home extends React.Component {
 					<p>{this.ifExpert(user.expert)}</p>
 				</div>
 				<div className="col-sm-2">
-				
+					<button className="btn btn-danger"><i className="fa fa-times fa-2x fa-fw"></i></button>
 				</div>
 			</div>
 			</li>)}

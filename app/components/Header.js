@@ -8,8 +8,9 @@ export class Header extends React.Component {
 				<div className="container">
 					<div className="navbar-header">
 						<ul className="nav navbar-nav">
-							<li><a href="C:\Users\Luka\ReactJS\src\app\components/Home.js" className="btn btn-default"> Users </a></li>
-							<li><a href="C:\Users\Luka\ReactJS\src\app\components/Inventory.js"className="btn btn-default"> Inventory </a></li>
+							<li><button className="btn btn-primary">Users</button></li>
+							<li><button className="btn btn-primary">Inventory</button></li>
+							<li><button className="btn btn-success pull-right">Add</button></li>
 						</ul>
 					</div>
 				</div>
