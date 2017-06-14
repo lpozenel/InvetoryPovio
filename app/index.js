@@ -4,14 +4,14 @@ import { Router, Route, browserHistory} from "react-router";
 
 //Components
 import{ Header }from "./components/Header";
-import{ Home }from "./components/Home";
+import{ Inventory }from "./components/Inventory";
 class App extends React.Component {
 	render () {
 
 		return(
 		<div className="container">
 			<Header/>
-			<Home/>
+			<Inventory/>
 		</div>
 		);	
 	}
