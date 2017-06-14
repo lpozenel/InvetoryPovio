@@ -2,13 +2,13 @@ import React from "react";
 
 import { SearchField } from "./SearchField"
 import { Display } from "./Display"
-import { InstantBox } from "./InstantBox"
+import { AddProgrammer } from "./AddProgrammer"
 export class Inventory extends React.Component {
 	render() {
 		return(
 	<div>
 
-		<InstantBox/>
+		<AddProgrammer/>
 
   	</div>
 

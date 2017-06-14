@@ -35,7 +35,7 @@ export class InstantBox extends React.Component {
         return (
             <div className="InstantBox">
                 <h2>Search users</h2>
-                <SearchField query={this.state.query} doSearch={this.doSearch}/>
+                <SearchField query={this.state.query} ref= doSearch={this.doSearch}/>
                 <Display data={this.state.filteredData}/>
             </div>
         );
