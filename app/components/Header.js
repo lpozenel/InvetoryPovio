@@ -1,6 +1,11 @@
 import React from "react";
+import Request from "superagent";
+import { render } from "react-dom";
+import { Link } from 'react-router-dom';
 
 export class Header extends React.Component {
+
+
 	render() {
 		return(
 			<nav className="navbar navbar-default">
@@ -10,9 +15,15 @@ export class Header extends React.Component {
 						<ul className="nav navbar-nav">
 							<li><button className="btn btn-primary">Users</button></li>
 							<li><button className="btn btn-primary">Inventory</button></li>
-							<li><button className="btn btn-success pull-right">Add</button></li>
 						</ul>
 					</div>
+				</div>
+				<div>
+					<h2>
+						Programmers
+						<Link to="/inventory/addnew"><button className="btn btn-success pull-right"><i className="fa fa-plus">Add</i></button></Link>
+					</h2>
+				
 				</div>
 			</nav>
 			)

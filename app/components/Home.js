@@ -28,6 +28,7 @@ export class Home extends React.Component {
 			<ul className="list-group">
 			<li className="list-group-item">
 			<div className="row">
+				
 				<div className="col-sm-2">
 					<b><p>Full name</p></b>
 				</div>
