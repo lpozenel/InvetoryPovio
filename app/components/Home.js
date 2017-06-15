@@ -11,7 +11,7 @@ export class Home extends React.Component {
 		var expert = props;
 
 		if (expert) {
-			return(<i className="fa fa-check fa-2x fa-fw"></i>);
+			return(<i className="fa fa-check fa-2x fa-fw tick"></i>);
 		} 
 	}
 

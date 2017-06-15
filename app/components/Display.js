@@ -1,6 +1,7 @@
-import Search from 'react-search'
+import Search from 'react-search';
 import React from "react";
 import Request from "superagent";
+import {Link} from "react-router-dom";
 
 export class Display extends React.Component {
 
@@ -13,7 +14,7 @@ export class Display extends React.Component {
     var expert = props;
 
         if (expert) {
-            return(<i className="fa fa-check fa-2x fa-fw"></i>);
+            return(<i className="fa fa-check fa-2x fa-fw tick"></i>);
         } 
     }
 
@@ -29,6 +30,14 @@ export class Display extends React.Component {
     render(){
         return(
         //making the rows to display
+
+        <div className="container">
+            <h2>
+                Programmers
+                <Link to="/inventory/addnew"><button className="btn btn-success pull-right"><i className="fa fa-plus"></i> Add</button></Link>
+            </h2>
+                
+                
         <ul className="list-group">
             <li className="list-group-item">
             <div className="row">
@@ -76,6 +85,7 @@ export class Display extends React.Component {
             </div>
             </li>)}
             </ul>
+            </div>
         )
     }
 }
