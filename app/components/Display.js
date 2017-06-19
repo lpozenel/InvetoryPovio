@@ -34,7 +34,6 @@ export class Display extends React.Component {
         <div className="container">
             <h2>
                 Programmers
-                <Link to="/inventory/addnew"><button className="btn btn-success pull-right"><i className="fa fa-plus"></i> Add</button></Link>
             </h2>
                 
                 

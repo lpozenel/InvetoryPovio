@@ -28,18 +28,18 @@ export class InstantSearch extends React.Component {
     		);
     return(
     	<div className="container">
-    		<div className="col-10">
-			  <form className="navbar-form form-control" role="search">
-			    <div className="input-group add-on">
-			   	<div>
+			  <form className="" role="search">
+			    
+			   	<span>
 			      <input className="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text" type="text"
     				value={this.state.search}
     				onChange={this.updateSearch}/>
-    				<Link to="/inventory/addnew"><button className="btn btn-success pull-right"><i className="fa fa-plus"></i> Add</button></Link>
-			    </div>
-			    </div>
+    				
+			    </span>
+			    
 			  </form>
-    		</div>
+              <br/>
+    		
     	<div>
     		<ul className="list-group">
     		<li className="list-group-item">

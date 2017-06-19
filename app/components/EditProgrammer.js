@@ -40,7 +40,7 @@ constructor(props){
  
 	handleSubmit(event) {
 		Request.put(`http://laravel.dev/v1/programmers/${this.props.match.params.id}`).send({ name: `${this.state.name}`, email: `${this.state.email}`, skills: `${this.state.skills}`, location: `${this.state.location}`, expert: parseInt(this.state.expert, 10)}).set('Accept', 'application/json').end(function(err, res) {})
-		alert('Programmer ' + this.state.name + ' was added!');
+		alert('Changes saved');
 		event.preventDefault();
 		this.setState({name:'', email: '', skills: '', location: '', expert: '1'})
 	}
@@ -74,34 +74,34 @@ constructor(props){
 					<div className="form-group row">
   						<label  className="col-2 col-form-label">Full name</label>
   							<div className="col-10">
-    						<input className="form-control" value={this.state.name} onChange={this.handleChangeName} type="text" placeholder="Full name"/>
+    						<input required className="form-control" value={this.state.name} onChange={this.handleChangeName} type="text" placeholder="Full name"/>
   						</div>
 					</div>
 
 					<div className="form-group row">
   						<label className="col-2 col-form-label">E-mail</label>
   							<div className="col-10">
-    						<input className="form-control" value={this.state.email} onChange={this.handleChangeEmail} type="text" placeholder="E-mail"/>
+    						<input required type="email" className="form-control" value={this.state.email} onChange={this.handleChangeEmail} type="text" placeholder="E-mail"/>
   						</div>
 					</div>
 
 					<div className="form-group row">
   						<label className="col-2 col-form-label">Skills</label>
   							<div className="col-10">
-    						<input className="form-control" value={this.state.skills} onChange={this.handleChangeSkills} type="text" placeholder="Skills"/>
+    						<input required className="form-control" value={this.state.skills} onChange={this.handleChangeSkills} type="text" placeholder="Skills"/>
   						</div>
 					</div>
 
 					<div className="form-group row">
   						<label className="col-2 col-form-label">Location</label>
   							<div className="col-10">
-    						<input className="form-control" value={this.state.location} onChange={this.handleChangeLocation} type="text" placeholder="Location"/>
+    						<input required className="form-control" value={this.state.location} onChange={this.handleChangeLocation} type="text" placeholder="Location"/>
   						</div>
 					</div>
 
   					<div className="form-group row">
   						<label className="col-2 col-form-label">Expert?</label>
-  						<select value={this.state.expert} onChange={this.handleChangeExpert} className="form-control">
+  						<select required value={this.state.expert} onChange={this.handleChangeExpert} className="form-control">
 							  <option value="1">Yes</option>
 							  <option value="0">No</option>
 						</select>

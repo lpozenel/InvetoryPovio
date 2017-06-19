@@ -15,6 +15,7 @@ export class Header extends React.Component {
 						<ul className="nav navbar-nav">
 							<li><Link to="/"><button className="btn btn-primary btn-lg"><i className="fa fa-users"></i> Programmers</button></Link></li>
 							<li><Link to="/inventory"><button className="btn btn-primary btn-lg"><i className="fa fa-list"></i> Inventory</button></Link></li>
+							<li><Link to="/inventory/addnew"><button className="btn btn-success btn-lg"><i className="fa fa-plus"></i> Add</button></Link></li>
 						</ul>
 					</div>
 				</div>
