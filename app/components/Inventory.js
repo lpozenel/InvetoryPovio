@@ -26,7 +26,6 @@ export class Inventory extends React.Component {
 	<div>
 
 		<InstantSearch programmers={this.state.user}/>
-		<Pages/>
 
   	</div>
 

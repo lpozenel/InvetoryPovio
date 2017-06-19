@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 
 export class Programmer extends React.Component {
 
@@ -17,7 +18,7 @@ export class Programmer extends React.Component {
 		<li className="list-group-item">
 			<div className="row">
                 <div className="col-sm-2">
-                    <a>{this.props.programmer.name}</a>
+                    <Link to={`/edit/${this.props.programmer.programmerId}`}>{this.props.programmer.name}</Link>
                 </div>
                 <div className="col-sm-2">
                     <p>{this.props.programmer.email}</p>

@@ -65,7 +65,7 @@ export class Display extends React.Component {
             {this.state.user.map((user, i) =><li className="list-group-item" key={i}>
             <div className="row">
                 <div className="col-sm-2">
-                    <a>{user.name}</a>
+                    <p>{user.name}</p>
                 </div>
                 <div className="col-sm-2">
                     <p>{user.email}</p>
