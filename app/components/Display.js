@@ -46,7 +46,7 @@ export class Display extends React.Component {
                 <div className="col-sm-2">
                     <b><p>E-mail</p></b>
                 </div>
-                <div className="col-sm-2">
+                <div className="col-sm-4">
                     <b><p>Skills</p></b>
                 </div>
                 <div className="col-sm-2">
@@ -54,9 +54,6 @@ export class Display extends React.Component {
                 </div>
                 <div className="col-sm-2">
                     <b><p>Expert</p></b>
-                </div>
-                <div className="col-sm-2">
-                    <b><p>Delete</p></b>
                 </div>
             </div>
             </li>
@@ -69,7 +66,7 @@ export class Display extends React.Component {
                 <div className="col-sm-2">
                     <p>{user.email}</p>
                 </div>
-                <div className="col-sm-2">
+                <div className="col-sm-4">
                     <p>{user.skills}</p>
                 </div>
                 <div className="col-sm-2">
@@ -77,9 +74,6 @@ export class Display extends React.Component {
                 </div>
                 <div className="col-sm-2">
                     <p>{this.ifExpert(user.expert)}</p>
-                </div>
-                <div className="col-sm-2">
-                    <button className="btn btn-danger"><i className="fa fa-times fa-2x fa-fw"></i></button>
                 </div>
             </div>
             </li>)}

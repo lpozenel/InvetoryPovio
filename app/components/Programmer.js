@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"
+import Request from "superagent"
 
 export class Programmer extends React.Component {
 
@@ -9,6 +10,11 @@ export class Programmer extends React.Component {
     if (expert) {
         return(<i className="fa fa-check fa-2x fa-fw tick"></i>);
         } 
+    }
+
+    deleteProgrammer(id) {
+        Request.delete(`http://laravel.dev/v1/programmers/${id}`).set('Accept', 'application/json').end(function(err, res) {})
+        alert("It's done, just refresh the page!:D ");
     }
 
 	render(){
@@ -33,7 +39,7 @@ export class Programmer extends React.Component {
                     <p>{this.ifExpert(this.props.programmer.expert)}</p>
                 </div>
                 <div className="col-sm-2">
-                    <button className="btn btn-danger"><i className="fa fa-times fa-2x fa-fw"></i></button>
+                    <button onClick={() => this.deleteProgrammer(this.props.programmer.programmerId)} className="btn btn-danger"><i className="fa fa-times fa-2x fa-fw"></i></button>
                 </div>
             </div>
         </li>

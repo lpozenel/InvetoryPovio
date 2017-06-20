@@ -13,7 +13,7 @@ constructor(props){
 		this.handleChangeName = this.handleChangeName.bind(this);
 		this.handleChangeEmail = this.handleChangeEmail.bind(this);
 		this.handleChangeSkills = this.handleChangeSkills.bind(this);
-		this.handleChangeLocatio = this.handleChangeLocation.bind(this);
+		this.handleChangeLocation = this.handleChangeLocation.bind(this);
 		this.handleChangeExpert = this.handleChangeExpert.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}

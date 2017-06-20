@@ -19,15 +19,16 @@ export class Pages extends React.Component {
 	
 	render() {
 		return(
+			<div>
 				<Pagination
-				activePage={this.state.activePage}
-				itemsCountPerPage={10}
-				totalItemsCount={450}
-				pageRangeDisplayed={5}
-				onChange={this.handlePageChange}
-				/>
+			      activePage={this.state.activePage} 
+			      itemsCountPerPage={10} 
+			      totalItemsCount={100} 
+			      onChange={this.handlePageChange}
+			    />
 
-			);
+			</div>
+		);
 	}
 
 }

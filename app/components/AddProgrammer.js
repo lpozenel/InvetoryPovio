@@ -12,7 +12,7 @@ export class AddProgrammer extends React.Component {
 		this.handleChangeName = this.handleChangeName.bind(this);
 		this.handleChangeEmail = this.handleChangeEmail.bind(this);
 		this.handleChangeSkills = this.handleChangeSkills.bind(this);
-		this.handleChangeLocatio = this.handleChangeLocation.bind(this);
+		this.handleChangeLocation = this.handleChangeLocation.bind(this);
 		this.handleChangeExpert = this.handleChangeExpert.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
@@ -48,7 +48,7 @@ export class AddProgrammer extends React.Component {
 		<div className="container">
             <h2>
                 Programmers
-                <Link to="/"><button className="btn btn-danger pull-right"><i className="fa fa-chevron-left"></i> Back</button></Link>
+                <Link to="/inventory"><button className="btn btn-danger pull-right"><i className="fa fa-chevron-left"></i> Back</button></Link>
             </h2>
 
 			<form onSubmit={this.handleSubmit}>

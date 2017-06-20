@@ -67,9 +67,7 @@ export class Home extends React.Component {
 				<div className="col-sm-2">
 					<p>{this.ifExpert(user.expert)}</p>
 				</div>
-				<div className="col-sm-2">
-					<button className="btn btn-danger"><i className="fa fa-times fa-2x fa-fw"></i></button>
-				</div>
+
 			</div>
 			</li>)}
 			</ul>
